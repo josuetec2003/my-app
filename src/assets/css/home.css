@@ -1,3 +1,15 @@
 li {
 	color:#2880E4;
 }
+
+.editar {
+	color: #E37A11;
+	font-weight: bold;
+}
+.editar:hover {
+	cursor: pointer;
+}
+.emp-actual {
+	color: #266EE5 !important;
+
+}
