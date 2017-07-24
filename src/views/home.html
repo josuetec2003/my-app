@@ -1,45 +1,4 @@
-<button (click)="mostrar()">Toggle</button>
+<h1>{{ titulo }}</h1>
 
-<div *ngIf="mostrarDatos">
-	<ul [class.mi-estilo]="mostrarDatos">
-		<li>Identidad: <strong>{{ empleado.id }}</strong> </li>
-		<li>Nombre: <strong>{{ empleado.nombre }}</strong></li>
-		<li>Apellido: <strong>{{ empleado.apellido }}</strong></li>
-		<li>Salario: <strong>{{ empleado.salario }}</strong></li>
-	</ul>
-
-	<!-- Two way data binding -->
-
-	<p>Identidad  <br /> <input type="text" [(ngModel)]="empleado.id"></p>
-	<p>Nombre <br /> <input id="nombre" type="text" [(ngModel)]="empleado.nombre"></p>
-	<p>Apellido <br /> <input type="text" [(ngModel)]="empleado.apellido"></p>
-	<p>Salario <br /> <input type="text" [(ngModel)]="empleado.salario"></p>
-</div>
-
-<hr />
-<!-- Directivas: *ngIf, *ngFor -->
-
-<table width="50%">
-	<thead>
-		<tr>
-			<th>ID</th>
-			<th>Nombre</th>
-			<th>Apellido</th>
-			<th>Salario</th>
-		</tr>
-	</thead>
-	<tbody>	
-		<tr *ngFor="let e of empleados" [class.emp-actual]="e === empleadoActual">
-			<td>{{ e.id }}</td>
-			<td class="editar" (click)="editarEmpleado(e)">{{ e.nombre }}</td>
-			<td>{{ e.apellido }}</td>
-			<td>{{ e.salario }}</td>
-		</tr>
-	</tbody>
-</table>
-
-
-
-
-
-
+<emp></emp>
+<emp-form></emp-form>

@@ -1,7 +1,7 @@
 export class Empleado
 {
 	constructor (
-		public id:string, 
+		public id:number, 
 		public nombre:string, 
 		public apellido:string, 
 		public salario:number){}

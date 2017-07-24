@@ -1,0 +1,13 @@
+<h4>{{ titulo }}</h4>
+
+<div *ngIf="empleado">
+	<p>
+		Identidad <input type="number" [(ngModel)]="empleado.id"> 
+		Nombre <input id="nombre" type="text" [(ngModel)]="empleado.nombre">
+	</p>
+
+	<p>
+		Apellido <input type="text" [(ngModel)]="empleado.apellido">
+		Salario <input type="number" [(ngModel)]="empleado.salario">
+	</p>
+</div>
