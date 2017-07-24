@@ -10,8 +10,8 @@ import { EmpleadosService } from './empleados.service'
 
 export class EmpleadoComponent implements OnInit
 {
-	@Input() empleado:Empleado;
-	empleadoActual:Empleado;
+	empleado:Empleado;
+	public empleadoActual:Empleado;
 	empleados: Empleado[];
 
 	constructor (private empleadosService: EmpleadosService) { }
@@ -22,6 +22,7 @@ export class EmpleadoComponent implements OnInit
 		{
 			this.empleados = emps;
 			this.empleado = this.empleados[0];
+			this.empleadoActual = this.empleados[0];
 		});
 	}
 

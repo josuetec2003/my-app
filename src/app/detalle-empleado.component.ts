@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Empleado } from '../models/empleado';
 
 @Component({
 	selector: 'emp-form',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
 })
 
 export class DetalleEmpleadoComponent {
+	@Input() empleado:Empleado;	
 	titulo:string = "Aqui va el detalle del empleado";
 }
